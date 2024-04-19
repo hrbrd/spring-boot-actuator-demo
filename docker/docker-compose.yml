@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  prometheus:
+    image: bitnami/prometheus:2.51.2
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+  grafana:
+    image: grafana/grafana:10.4.2-ubuntu
+    ports:
+      - 3000:3000
